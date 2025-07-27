@@ -4,12 +4,17 @@ import SnapKit
 class ViewController: UIViewController {
 
     // Элементы интерфейса
+    private enum Values {
+        static let initialResultLabelText = "0"
+    }
+
     private lazy var resultLabel: UILabel = {
         let label = UILabel()
-        label.text = "0"
+        label.text = Values.initialResultLabelText
         label.textAlignment = .right
         label.font = UIFont.systemFont(ofSize: 40)
         label.backgroundColor = .white
+        
         return label
     }()
 
